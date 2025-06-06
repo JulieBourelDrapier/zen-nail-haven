@@ -20,16 +20,24 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Zen-inspired color palette
+				// Zen-inspired color palette with dark mode variants
 				zen: {
 					sage: '#9CAF88',
+					'sage-dark': '#7A8B6F',
 					mint: '#B8D4C1', 
+					'mint-dark': '#9BB8A5',
 					cream: '#F5F2E8',
+					'cream-dark': '#2D2B26',
 					sand: '#E8DCC0',
+					'sand-dark': '#3A342A',
 					stone: '#D4C5B0',
+					'stone-dark': '#4A453C',
 					forest: '#7A8471',
+					'forest-dark': '#A8B89A',
 					lavender: '#C8B5D4',
-					pearl: '#FEFCF8'
+					'lavender-dark': '#9D8AAA',
+					pearl: '#FEFCF8',
+					'pearl-dark': '#1A1916'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

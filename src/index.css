@@ -46,11 +46,50 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  .dark {
+    --background: 26 25 22; /* zen-pearl-dark */
+    --foreground: 168 184 154; /* zen-forest-dark */
+
+    --card: 26 25 22;
+    --card-foreground: 168 184 154;
+
+    --popover: 26 25 22;
+    --popover-foreground: 168 184 154;
+
+    --primary: 122 139 111; /* zen-sage-dark */
+    --primary-foreground: 26 25 22;
+
+    --secondary: 58 52 42; /* zen-sand-dark */
+    --secondary-foreground: 168 184 154;
+
+    --muted: 45 43 38; /* zen-cream-dark */
+    --muted-foreground: 168 184 154;
+
+    --accent: 155 184 165; /* zen-mint-dark */
+    --accent-foreground: 26 25 22;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 58 52 42;
+    --input: 58 52 42;
+    --ring: 122 139 111;
+
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 142.1 76.2% 36.3%;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition-colors duration-300;
   }
 
   body {
@@ -65,15 +104,15 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-zen-sage to-zen-forest bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-zen-sage to-zen-forest dark:from-zen-sage-dark dark:to-zen-forest-dark bg-clip-text text-transparent;
   }
   
   .zen-gradient {
-    @apply bg-gradient-to-br from-zen-pearl via-zen-cream to-zen-mint;
+    @apply bg-gradient-to-br from-zen-pearl via-zen-cream to-zen-mint dark:from-zen-pearl-dark dark:via-zen-cream-dark dark:to-zen-mint-dark;
   }
   
   .zen-card-gradient {
-    @apply bg-gradient-to-br from-zen-pearl to-zen-cream;
+    @apply bg-gradient-to-br from-zen-pearl to-zen-cream dark:from-zen-pearl-dark dark:to-zen-cream-dark;
   }
 
   /* Animation delays */
