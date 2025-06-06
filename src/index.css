@@ -75,4 +75,60 @@
   .zen-card-gradient {
     @apply bg-gradient-to-br from-zen-pearl to-zen-cream;
   }
+
+  /* Animation delays */
+  .animation-delay-300 {
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-700 {
+    animation-delay: 700ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-900 {
+    animation-delay: 900ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-1200 {
+    animation-delay: 1200ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-1500 {
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-1800 {
+    animation-delay: 1800ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2000ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-2500 {
+    animation-delay: 2500ms;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-3000 {
+    animation-delay: 3000ms;
+    animation-fill-mode: forwards;
+  }
 }
