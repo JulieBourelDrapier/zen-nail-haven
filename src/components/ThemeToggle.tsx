@@ -2,9 +2,17 @@
 import React from "react"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "./ThemeProvider"
+import { cn } from "@/lib/utils"
 
-export function ThemeToggle() {
+interface ThemeToggleProps {
+  className?: string
+}
+
+export function ThemeToggle({ className }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme()
+  
+  // Determine if we're in dark mode (including system preference)
+  const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -16,13 +24,6 @@ export function ThemeToggle() {
     }
   }
 
-  const getIcon = () => {
-    if (theme === "dark") {
-      return <Moon className="h-4 w-4" />
-    }
-    return <Sun className="h-4 w-4" />
-  }
-
   const getLabel = () => {
     if (theme === "light") return "Mode clair"
     if (theme === "dark") return "Mode sombre"
@@ -30,15 +31,62 @@ export function ThemeToggle() {
   }
 
   return (
-    <button
+    <div
+      className={cn(
+        "flex w-16 h-8 p-1 rounded-full cursor-pointer transition-all duration-300",
+        isDark 
+          ? "bg-zen-forest-dark border border-zen-sand-dark" 
+          : "bg-zen-pearl border border-zen-sand",
+        className
+      )}
       onClick={toggleTheme}
-      className="inline-flex items-center justify-center rounded-full w-10 h-10 bg-zen-sage/10 dark:bg-zen-sage-dark/20 hover:bg-zen-sage/20 dark:hover:bg-zen-sage-dark/30 transition-all duration-300 group"
+      role="button"
+      tabIndex={0}
       aria-label={`Changer le thème - ${getLabel()}`}
       title={getLabel()}
     >
-      <div className="transition-transform duration-300 group-hover:scale-110">
-        {getIcon()}
+      <div className="flex justify-between items-center w-full">
+        <div
+          className={cn(
+            "flex justify-center items-center w-6 h-6 rounded-full transition-transform duration-300",
+            isDark 
+              ? "transform translate-x-0 bg-zen-sage-dark" 
+              : "transform translate-x-8 bg-zen-sage"
+          )}
+        >
+          {isDark ? (
+            <Moon 
+              className="w-4 h-4 text-zen-pearl" 
+              strokeWidth={1.5}
+            />
+          ) : (
+            <Sun 
+              className="w-4 h-4 text-zen-pearl-dark" 
+              strokeWidth={1.5}
+            />
+          )}
+        </div>
+        <div
+          className={cn(
+            "flex justify-center items-center w-6 h-6 rounded-full transition-transform duration-300",
+            isDark 
+              ? "bg-transparent" 
+              : "transform -translate-x-8"
+          )}
+        >
+          {isDark ? (
+            <Sun 
+              className="w-4 h-4 text-zen-stone-dark" 
+              strokeWidth={1.5}
+            />
+          ) : (
+            <Moon 
+              className="w-4 h-4 text-zen-forest-dark" 
+              strokeWidth={1.5}
+            />
+          )}
+        </div>
       </div>
-    </button>
+    </div>
   )
 }
