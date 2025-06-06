@@ -6,32 +6,34 @@ const Hero = () => {
     <section id="home" className="min-h-screen zen-gradient flex items-center justify-center px-4 pt-20 relative overflow-hidden">
       <div className="container mx-auto text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-zen-forest mb-6 leading-tight animate-fade-in opacity-0 animation-delay-300">
-            Votre Oasis de
-            <span className="text-gradient block mt-2 animate-fade-in opacity-0 animation-delay-500">Sérénité et Beauté</span>
-          </h1>
+          <header>
+            <h1 className="text-4xl md:text-6xl font-bold text-zen-forest mb-6 leading-tight animate-fade-in opacity-0 animation-delay-300">
+              Votre Oasis de
+              <span className="text-gradient block mt-2 animate-fade-in opacity-0 animation-delay-500">Sérénité et Beauté</span>
+            </h1>
+          </header>
           
           <p className="text-lg md:text-xl text-zen-forest/80 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in opacity-0 animation-delay-700">
             Découvrez un havre de paix où le temps s'arrête. Dans mon salon à domicile, 
             chaque soin devient un moment de détente absolue, pensé spécialement pour vous.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 animation-delay-900">
+          <nav className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 animation-delay-900" role="navigation" aria-label="Actions principales">
             <a 
               href="#contact" 
               className="bg-zen-sage text-zen-pearl px-8 py-4 rounded-full hover:bg-zen-forest transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 font-medium shadow-lg text-lg hover:shadow-xl group"
-              aria-label="Book an appointment"
+              aria-label="Prendre rendez-vous pour un soin de manucure"
             >
               <span className="group-hover:animate-pulse">Prendre Rendez-vous</span>
             </a>
             <a 
               href="#services" 
               className="border-2 border-zen-sage text-zen-sage px-8 py-4 rounded-full hover:bg-zen-sage hover:text-zen-pearl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 font-medium text-lg hover:shadow-lg"
-              aria-label="View our services"
+              aria-label="Découvrir tous nos soins de manucure"
             >
               Découvrir nos Soins
             </a>
-          </div>
+          </nav>
         </div>
         
         {/* Enhanced floating elements with different animations */}
