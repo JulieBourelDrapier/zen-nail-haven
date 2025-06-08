@@ -31,13 +31,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-zen-coral/10 dark:bg-zen-coral-dark/10">
+    <section id="services" className="py-20 bg-zen-primary/10 dark:bg-zen-primary-dark/10">
       <div className="container mx-auto px-4">
         <header className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-zen-gray dark:text-zen-warm-dark mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Nos Soins Signature
           </h2>
-          <p className="text-lg text-zen-gray/80 dark:text-zen-warm-dark/80 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
             Chaque soin est pensé comme un rituel de bien-être, 
             dans le respect de votre rythme et de vos besoins.
           </p>
@@ -47,28 +47,28 @@ const Services = () => {
           {services.map((service, index) => (
             <article 
               key={index}
-              className="zen-card-gradient p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-zen-coral/20 dark:border-zen-coral-dark/20"
+              className="zen-card-gradient bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-border"
               itemScope
               itemType="https://schema.org/Service"
               itemProp="itemListElement"
             >
               <header className="flex items-start mb-4">
-                <Heart className="h-6 w-6 text-zen-red dark:text-zen-red-dark mt-1 mr-3 flex-shrink-0" aria-hidden="true" />
-                <h3 className="text-xl font-semibold text-zen-gray dark:text-zen-warm-dark" itemProp="name">
+                <Heart className="h-6 w-6 text-zen-accent dark:text-zen-accent-dark mt-1 mr-3 flex-shrink-0" aria-hidden="true" />
+                <h3 className="text-xl font-semibold text-card-foreground" itemProp="name">
                   {service.title}
                 </h3>
               </header>
               
-              <p className="text-zen-gray/80 dark:text-zen-warm-dark/80 mb-6 leading-relaxed" itemProp="description">
+              <p className="text-card-foreground/80 mb-6 leading-relaxed" itemProp="description">
                 {service.description}
               </p>
               
-              <footer className="flex justify-between items-center pt-4 border-t border-zen-coral/30 dark:border-zen-coral-dark/30">
-                <div className="flex items-center text-zen-gray/70 dark:text-zen-warm-dark/70">
+              <footer className="flex justify-between items-center pt-4 border-t border-border">
+                <div className="flex items-center text-card-foreground/70">
                   <Circle className="h-4 w-4 mr-2" aria-hidden="true" />
                   <span className="text-sm" itemProp="duration">{service.duration}</span>
                 </div>
-                <div className="text-zen-red dark:text-zen-red-dark font-semibold" itemProp="offers" itemScope itemType="https://schema.org/Offer">
+                <div className="text-zen-accent dark:text-zen-accent-dark font-semibold" itemProp="offers" itemScope itemType="https://schema.org/Offer">
                   <span itemProp="price">{service.price}</span>
                 </div>
               </footer>

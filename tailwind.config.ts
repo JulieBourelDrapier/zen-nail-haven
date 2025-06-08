@@ -20,21 +20,15 @@ export default {
 		},
 		extend: {
 			colors: {
-				// New color palette based on user requirements
+				// Simplified 2-color palette
 				zen: {
-					// Light mode colors
-					warm: '#ffeaa7',      // Warm yellow
-					coral: '#fab1a0',     // Coral pink
-					red: '#ff7675',       // Soft red
-					pink: '#fd79a8',      // Bright pink
-					gray: '#636e72',      // Cool gray
+					// Light mode - only 2 colors
+					primary: '#ffeaa7',    // Warm yellow
+					accent: '#ff7675',     // Soft red
 					
-					// Dark mode colors
-					'warm-dark': '#fdcb6e',   // Darker warm yellow
-					'coral-dark': '#e17055',  // Darker coral
-					'red-dark': '#d63031',    // Darker red
-					'pink-dark': '#e84393',   // Darker pink
-					'gray-dark': '#2d3436',   // Dark gray
+					// Dark mode - only 2 colors  
+					'primary-dark': '#fdcb6e',   // Darker warm yellow
+					'accent-dark': '#d63031',    // Darker red
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
