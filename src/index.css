@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 254 252 248; /* zen-pearl */
-    --foreground: 122 132 113; /* zen-forest */
+    --background: 255 234 167; /* zen-warm */
+    --foreground: 99 110 114; /* zen-gray */
 
-    --card: 254 252 248;
-    --card-foreground: 122 132 113;
+    --card: 255 234 167;
+    --card-foreground: 99 110 114;
 
-    --popover: 254 252 248;
-    --popover-foreground: 122 132 113;
+    --popover: 255 234 167;
+    --popover-foreground: 99 110 114;
 
-    --primary: 156 175 136; /* zen-sage */
-    --primary-foreground: 254 252 248;
+    --primary: 250 177 160; /* zen-coral */
+    --primary-foreground: 255 234 167;
 
-    --secondary: 232 220 192; /* zen-sand */
-    --secondary-foreground: 122 132 113;
+    --secondary: 253 121 168; /* zen-pink */
+    --secondary-foreground: 99 110 114;
 
-    --muted: 245 242 232; /* zen-cream */
-    --muted-foreground: 122 132 113;
+    --muted: 255 234 167;
+    --muted-foreground: 99 110 114;
 
-    --accent: 184 212 193; /* zen-mint */
-    --accent-foreground: 122 132 113;
+    --accent: 255 118 117; /* zen-red */
+    --accent-foreground: 99 110 114;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 232 220 192;
-    --input: 232 220 192;
-    --ring: 156 175 136;
+    --border: 250 177 160;
+    --input: 250 177 160;
+    --ring: 253 121 168;
 
     --radius: 0.5rem;
 
@@ -48,33 +48,33 @@
   }
 
   .dark {
-    --background: 26 25 22; /* zen-pearl-dark */
-    --foreground: 168 184 154; /* zen-forest-dark */
+    --background: 45 52 54; /* zen-gray-dark */
+    --foreground: 253 203 110; /* zen-warm-dark */
 
-    --card: 26 25 22;
-    --card-foreground: 168 184 154;
+    --card: 45 52 54;
+    --card-foreground: 253 203 110;
 
-    --popover: 26 25 22;
-    --popover-foreground: 168 184 154;
+    --popover: 45 52 54;
+    --popover-foreground: 253 203 110;
 
-    --primary: 122 139 111; /* zen-sage-dark */
-    --primary-foreground: 26 25 22;
+    --primary: 225 112 85; /* zen-coral-dark */
+    --primary-foreground: 45 52 54;
 
-    --secondary: 58 52 42; /* zen-sand-dark */
-    --secondary-foreground: 168 184 154;
+    --secondary: 232 67 147; /* zen-pink-dark */
+    --secondary-foreground: 253 203 110;
 
-    --muted: 45 43 38; /* zen-cream-dark */
-    --muted-foreground: 168 184 154;
+    --muted: 45 52 54;
+    --muted-foreground: 253 203 110;
 
-    --accent: 155 184 165; /* zen-mint-dark */
-    --accent-foreground: 26 25 22;
+    --accent: 214 48 49; /* zen-red-dark */
+    --accent-foreground: 253 203 110;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 58 52 42;
-    --input: 58 52 42;
-    --ring: 122 139 111;
+    --border: 225 112 85;
+    --input: 225 112 85;
+    --ring: 232 67 147;
 
     --sidebar-background: 240 10% 3.9%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -104,15 +104,15 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-zen-sage to-zen-forest dark:from-zen-sage-dark dark:to-zen-forest-dark bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-zen-coral to-zen-red dark:from-zen-coral-dark dark:to-zen-red-dark bg-clip-text text-transparent;
   }
   
   .zen-gradient {
-    @apply bg-gradient-to-br from-zen-pearl via-zen-cream to-zen-mint dark:from-zen-pearl-dark dark:via-zen-cream-dark dark:to-zen-mint-dark;
+    @apply bg-gradient-to-br from-zen-warm via-zen-coral to-zen-pink dark:from-zen-warm-dark dark:via-zen-coral-dark dark:to-zen-pink-dark;
   }
   
   .zen-card-gradient {
-    @apply bg-gradient-to-br from-zen-pearl to-zen-cream dark:from-zen-pearl-dark dark:to-zen-cream-dark;
+    @apply bg-gradient-to-br from-zen-warm to-zen-coral dark:from-zen-warm-dark dark:to-zen-coral-dark;
   }
 
   /* Animation delays */

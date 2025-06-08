@@ -5,32 +5,32 @@ import { ThemeToggle } from './ThemeToggle';
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-zen-pearl/95 dark:bg-zen-pearl-dark/95 backdrop-blur-sm border-b border-zen-sand/20 dark:border-zen-sand-dark/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-zen-warm/95 dark:bg-zen-gray-dark/95 backdrop-blur-sm border-b border-zen-coral/20 dark:border-zen-coral-dark/20">
       <nav className="container mx-auto px-4 py-4" role="navigation" aria-label="Main navigation">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Heart className="h-6 w-6 text-zen-sage dark:text-zen-sage-dark animate-glow" aria-hidden="true" />
-            <h1 className="text-xl font-semibold text-zen-forest dark:text-zen-forest-dark">Zen Nails</h1>
+            <Heart className="h-6 w-6 text-zen-red dark:text-zen-red-dark animate-glow" aria-hidden="true" />
+            <h1 className="text-xl font-semibold text-zen-gray dark:text-zen-warm-dark">Zen Nails</h1>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <a 
               href="#home" 
-              className="text-zen-forest dark:text-zen-forest-dark hover:text-zen-sage dark:hover:text-zen-sage-dark transition-colors duration-300 font-medium"
+              className="text-zen-gray dark:text-zen-warm-dark hover:text-zen-red dark:hover:text-zen-red-dark transition-colors duration-300 font-medium"
               aria-label="Go to home section"
             >
               Accueil
             </a>
             <a 
               href="#services" 
-              className="text-zen-forest dark:text-zen-forest-dark hover:text-zen-sage dark:hover:text-zen-sage-dark transition-colors duration-300 font-medium"
+              className="text-zen-gray dark:text-zen-warm-dark hover:text-zen-red dark:hover:text-zen-red-dark transition-colors duration-300 font-medium"
               aria-label="View our services"
             >
               Services
             </a>
             <a 
               href="#about" 
-              className="text-zen-forest dark:text-zen-forest-dark hover:text-zen-sage dark:hover:text-zen-sage-dark transition-colors duration-300 font-medium"
+              className="text-zen-gray dark:text-zen-warm-dark hover:text-zen-red dark:hover:text-zen-red-dark transition-colors duration-300 font-medium"
               aria-label="Learn about us"
             >
               À propos
@@ -39,7 +39,7 @@ const Header = () => {
               <ThemeToggle />
               <a 
                 href="#contact" 
-                className="bg-zen-sage dark:bg-zen-sage-dark text-zen-pearl dark:text-zen-pearl-dark px-6 py-2 rounded-full hover:bg-zen-forest dark:hover:bg-zen-forest-dark transition-all duration-300 transform hover:scale-105 font-medium shadow-lg"
+                className="bg-zen-red dark:bg-zen-red-dark text-zen-warm dark:text-zen-warm-dark px-6 py-2 rounded-full hover:bg-zen-pink dark:hover:bg-zen-pink-dark transition-all duration-300 transform hover:scale-105 font-medium shadow-lg"
                 aria-label="Contact us"
               >
                 Contact
@@ -51,7 +51,7 @@ const Header = () => {
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
             <button 
-              className="p-2 text-zen-forest dark:text-zen-forest-dark hover:text-zen-sage dark:hover:text-zen-sage-dark transition-colors duration-300"
+              className="p-2 text-zen-gray dark:text-zen-warm-dark hover:text-zen-red dark:hover:text-zen-red-dark transition-colors duration-300"
               aria-label="Open mobile menu"
               aria-expanded="false"
             >

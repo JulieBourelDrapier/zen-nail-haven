@@ -20,24 +20,21 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Zen-inspired color palette with dark mode variants
+				// New color palette based on user requirements
 				zen: {
-					sage: '#9CAF88',
-					'sage-dark': '#7A8B6F',
-					mint: '#B8D4C1', 
-					'mint-dark': '#9BB8A5',
-					cream: '#F5F2E8',
-					'cream-dark': '#2D2B26',
-					sand: '#E8DCC0',
-					'sand-dark': '#3A342A',
-					stone: '#D4C5B0',
-					'stone-dark': '#4A453C',
-					forest: '#7A8471',
-					'forest-dark': '#A8B89A',
-					lavender: '#C8B5D4',
-					'lavender-dark': '#9D8AAA',
-					pearl: '#FEFCF8',
-					'pearl-dark': '#1A1916'
+					// Light mode colors
+					warm: '#ffeaa7',      // Warm yellow
+					coral: '#fab1a0',     // Coral pink
+					red: '#ff7675',       // Soft red
+					pink: '#fd79a8',      // Bright pink
+					gray: '#636e72',      // Cool gray
+					
+					// Dark mode colors
+					'warm-dark': '#fdcb6e',   // Darker warm yellow
+					'coral-dark': '#e17055',  // Darker coral
+					'red-dark': '#d63031',    // Darker red
+					'pink-dark': '#e84393',   // Darker pink
+					'gray-dark': '#2d3436',   // Dark gray
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -106,12 +103,37 @@ export default {
 				'glow': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.5' }
+				},
+				'slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px) scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0) scale(1)'
+					}
+				},
+				'bounce-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.3) rotate(-10deg)'
+					},
+					'50%': {
+						transform: 'scale(1.05) rotate(5deg)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1) rotate(0deg)'
+					}
 				}
 			},
 			animation: {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'float': 'float 3s ease-in-out infinite',
-				'glow': 'glow 2s ease-in-out infinite'
+				'glow': 'glow 2s ease-in-out infinite',
+				'slide-up': 'slide-up 0.8s ease-out',
+				'bounce-in': 'bounce-in 0.6s ease-out'
 			}
 		}
 	},

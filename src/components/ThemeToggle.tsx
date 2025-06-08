@@ -35,8 +35,8 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
       className={cn(
         "flex w-16 h-8 p-1 rounded-full cursor-pointer transition-all duration-300",
         isDark 
-          ? "bg-zen-forest-dark border border-zen-sand-dark" 
-          : "bg-zen-pearl border border-zen-sand",
+          ? "bg-zen-gray-dark border border-zen-coral-dark" 
+          : "bg-zen-warm border border-zen-coral",
         className
       )}
       onClick={toggleTheme}
@@ -50,18 +50,18 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
           className={cn(
             "flex justify-center items-center w-6 h-6 rounded-full transition-transform duration-300",
             isDark 
-              ? "transform translate-x-0 bg-zen-sage-dark" 
-              : "transform translate-x-8 bg-zen-sage"
+              ? "transform translate-x-0 bg-zen-red-dark" 
+              : "transform translate-x-8 bg-zen-red"
           )}
         >
           {isDark ? (
             <Moon 
-              className="w-4 h-4 text-zen-pearl" 
+              className="w-4 h-4 text-zen-warm-dark" 
               strokeWidth={1.5}
             />
           ) : (
             <Sun 
-              className="w-4 h-4 text-zen-pearl-dark" 
+              className="w-4 h-4 text-zen-warm" 
               strokeWidth={1.5}
             />
           )}
@@ -76,12 +76,12 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
         >
           {isDark ? (
             <Sun 
-              className="w-4 h-4 text-zen-stone-dark" 
+              className="w-4 h-4 text-zen-coral-dark" 
               strokeWidth={1.5}
             />
           ) : (
             <Moon 
-              className="w-4 h-4 text-zen-forest-dark" 
+              className="w-4 h-4 text-zen-gray" 
               strokeWidth={1.5}
             />
           )}
