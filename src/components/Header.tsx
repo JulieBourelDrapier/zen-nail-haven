@@ -26,6 +26,13 @@ const Header = () => {
               Services
             </a>
             <a 
+              href="#gallery" 
+              className="text-foreground hover:text-zen-accent transition-colors duration-300 font-medium"
+              aria-label="View our gallery"
+            >
+              Galerie
+            </a>
+            <a 
               href="#about" 
               className="text-foreground hover:text-zen-accent transition-colors duration-300 font-medium"
               aria-label="Learn about us"
