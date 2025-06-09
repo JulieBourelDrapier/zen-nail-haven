@@ -1,8 +1,27 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Sparkles, Circle } from 'lucide-react';
 
 const MassageServices = () => {
+  const [particles, setParticles] = useState<Array<{id: number, x: number, y: number, delay: number}>>([]);
+
+  useEffect(() => {
+    const generateParticles = () => {
+      const newParticles = [];
+      for (let i = 0; i < 50; i++) {
+        newParticles.push({
+          id: i,
+          x: Math.random() * 100,
+          y: Math.random() * 100,
+          delay: Math.random() * 4
+        });
+      }
+      setParticles(newParticles);
+    };
+
+    generateParticles();
+  }, []);
+
   const massageServices = [
     {
       title: "Massage Corps Complet",
@@ -31,7 +50,7 @@ const MassageServices = () => {
   ];
 
   return (
-    <section className="py-20 bg-zen-secondary/10">
+    <section className="py-20 bg-zen-secondary/5">
       <div className="container mx-auto px-4">
         <header className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -47,15 +66,29 @@ const MassageServices = () => {
           {massageServices.map((service, index) => (
             <article 
               key={index}
-              className="sparkle-container zen-card-gradient bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-border cursor-pointer group relative overflow-hidden"
+              className="relative bg-card p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-border cursor-pointer group overflow-hidden"
             >
-              {/* Sparkle overlay effect */}
-              <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-4 left-4 w-2 h-2 bg-zen-secondary rounded-full animate-sparkle"></div>
-                <div className="absolute top-8 right-8 w-1.5 h-1.5 bg-zen-accent rounded-full animate-sparkle animation-delay-500"></div>
-                <div className="absolute bottom-6 left-12 w-1 h-1 bg-zen-primary rounded-full animate-sparkle animation-delay-1000"></div>
-                <div className="absolute top-1/2 right-6 w-1.5 h-1.5 bg-zen-secondary rounded-full animate-sparkle animation-delay-1500"></div>
-                <div className="absolute bottom-4 right-4 w-2 h-2 bg-zen-accent rounded-full animate-sparkle animation-delay-2000"></div>
+              {/* Animated background with particles */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                {particles.slice(index * 12, (index + 1) * 12).map((particle) => (
+                  <div
+                    key={particle.id}
+                    className="particle w-1 h-1 bg-zen-accent/30 animate-particle-float absolute"
+                    style={{
+                      left: `${particle.x}%`,
+                      top: `${particle.y}%`,
+                      animationDelay: `${particle.delay}s`
+                    }}
+                  />
+                ))}
+                
+                {/* Gradient overlays inspired by the 21st dev animation */}
+                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-zen-accent/20 to-transparent h-[2px] w-3/4 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-zen-accent/40 to-transparent h-px w-3/4 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-zen-primary/30 to-transparent h-[3px] w-1/4 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                
+                {/* Radial gradient mask */}
+                <div className="absolute inset-0 w-full h-full bg-card/50 [mask-image:radial-gradient(300px_150px_at_center,transparent_20%,white)] group-hover:[mask-image:radial-gradient(400px_200px_at_center,transparent_10%,white)] transition-all duration-500"></div>
               </div>
 
               <header className="flex items-start mb-4 relative z-10">
@@ -71,13 +104,16 @@ const MassageServices = () => {
               
               <footer className="flex justify-between items-center pt-4 border-t border-border relative z-10">
                 <div className="flex items-center text-card-foreground/70">
-                  <Circle className="h-4 w-4 mr-2 group-hover:fill-zen-primary transition-colors duration-300" aria-hidden="true" />
+                  <Circle className="h-4 w-4 mr-2 group-hover:text-zen-primary transition-colors duration-300" aria-hidden="true" />
                   <span className="text-sm">{service.duration}</span>
                 </div>
                 <div className="text-zen-accent font-semibold group-hover:text-zen-primary transition-colors duration-300">
                   {service.price}
                 </div>
               </footer>
+
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-zen-accent/5 to-zen-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
             </article>
           ))}
         </div>

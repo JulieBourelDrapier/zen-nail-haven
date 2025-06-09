@@ -20,17 +20,17 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Blue, gold, and duck green palette
+				// Blue and duck green palette
 				zen: {
 					// Light mode
 					primary: '#3498db',    // Blue
-					secondary: '#f39c12',  // Gold
+					secondary: '#16a085',  // Duck green (replacing gold)
 					accent: '#16a085',     // Duck green
 					
 					// Dark mode
 					'primary-dark': '#2980b9',   // Darker blue
-					'secondary-dark': '#e67e22', // Darker gold
-					'accent-dark': '#27ae60',    // Darker green
+					'secondary-dark': '#138d75', // Darker duck green
+					'accent-dark': '#138d75',    // Darker duck green
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -136,6 +136,20 @@ export default {
 						opacity: '0',
 						transform: 'scale(0.8) rotate(360deg)'
 					}
+				},
+				'particle-float': {
+					'0%, 100%': { 
+						transform: 'translateY(0px) translateX(0px)',
+						opacity: '0.3'
+					},
+					'33%': { 
+						transform: 'translateY(-20px) translateX(10px)',
+						opacity: '1'
+					},
+					'66%': { 
+						transform: 'translateY(-10px) translateX(-5px)',
+						opacity: '0.7'
+					}
 				}
 			},
 			animation: {
@@ -144,7 +158,8 @@ export default {
 				'glow': 'glow 2s ease-in-out infinite',
 				'slide-up': 'slide-up 0.8s ease-out',
 				'bounce-in': 'bounce-in 0.6s ease-out',
-				'sparkle': 'sparkle 3s ease-in-out infinite'
+				'sparkle': 'sparkle 3s ease-in-out infinite',
+				'particle-float': 'particle-float 4s ease-in-out infinite'
 			}
 		}
 	},

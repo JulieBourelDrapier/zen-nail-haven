@@ -8,22 +8,22 @@
 @layer base {
   :root {
     --background: 255 255 255; /* white */
-    --foreground: 51 51 51; /* near black */
+    --foreground: 17 24 39; /* gray-900 for better contrast */
 
     --card: 255 255 255;
-    --card-foreground: 51 51 51;
+    --card-foreground: 17 24 39;
 
     --popover: 255 255 255;
-    --popover-foreground: 51 51 51;
+    --popover-foreground: 17 24 39;
 
     --primary: 52 152 219; /* zen-primary (blue) */
     --primary-foreground: 255 255 255;
 
-    --secondary: 243 156 18; /* zen-secondary (gold) */
-    --secondary-foreground: 51 51 51;
+    --secondary: 22 160 133; /* zen-secondary (duck green) */
+    --secondary-foreground: 255 255 255;
 
-    --muted: 248 248 248;
-    --muted-foreground: 102 102 102;
+    --muted: 248 250 252;
+    --muted-foreground: 71 85 105;
 
     --accent: 22 160 133; /* zen-accent (duck green) */
     --accent-foreground: 255 255 255;
@@ -31,8 +31,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 229 229 229;
-    --input: 229 229 229;
+    --border: 226 232 240;
+    --input: 226 232 240;
     --ring: 52 152 219;
 
     --radius: 0.5rem;
@@ -48,32 +48,32 @@
   }
 
   .dark {
-    --background: 51 51 51; /* near black */
-    --foreground: 248 248 248; /* near white */
+    --background: 15 23 42; /* slate-800 */
+    --foreground: 248 250 252; /* slate-50 for better contrast */
 
-    --card: 51 51 51;
-    --card-foreground: 248 248 248;
+    --card: 30 41 59; /* slate-700 */
+    --card-foreground: 248 250 252;
 
-    --popover: 51 51 51;
-    --popover-foreground: 248 248 248;
+    --popover: 30 41 59;
+    --popover-foreground: 248 250 252;
 
     --primary: 41 128 185; /* zen-primary-dark (darker blue) */
     --primary-foreground: 255 255 255;
 
-    --secondary: 230 126 34; /* zen-secondary-dark (darker gold) */
-    --secondary-foreground: 51 51 51;
+    --secondary: 19 120 107; /* zen-secondary-dark (darker duck green) */
+    --secondary-foreground: 255 255 255;
 
-    --muted: 68 68 68;
-    --muted-foreground: 187 187 187;
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
 
-    --accent: 39 174 96; /* zen-accent-dark (darker green) */
+    --accent: 19 120 107; /* zen-accent-dark (darker duck green) */
     --accent-foreground: 255 255 255;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 102 102 102;
-    --input: 102 102 102;
+    --border: 71 85 105;
+    --input: 71 85 105;
     --ring: 41 128 185;
 
     --sidebar-background: 240 10% 3.9%;
@@ -108,11 +108,11 @@
   }
   
   .zen-gradient {
-    @apply bg-gradient-to-br from-zen-primary/20 to-zen-accent/20;
+    @apply bg-zen-primary/5;
   }
   
   .zen-card-gradient {
-    @apply bg-gradient-to-br from-zen-secondary/20 to-zen-accent/20;
+    @apply bg-zen-secondary/5;
   }
 
   /* Animation delays */
@@ -171,7 +171,7 @@
     animation-fill-mode: forwards;
   }
 
-  /* Sparkle effects */
+  /* Enhanced sparkle effects */
   .sparkle-container {
     position: relative;
     overflow: hidden;
@@ -184,12 +184,19 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    animation: sparkle-sweep 3s infinite;
+    background: linear-gradient(90deg, transparent, rgba(22,160,133,0.1), transparent);
+    animation: sparkle-sweep 4s infinite;
   }
 
   @keyframes sparkle-sweep {
     0% { left: -100%; }
     100% { left: 100%; }
+  }
+
+  /* Particle animation */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
   }
 }
