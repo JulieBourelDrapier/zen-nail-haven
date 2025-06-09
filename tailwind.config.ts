@@ -20,15 +20,17 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Simplified 2-color palette
+				// Blue, gold, and duck green palette
 				zen: {
-					// Light mode - only 2 colors
-					primary: '#ffeaa7',    // Warm yellow
-					accent: '#ff7675',     // Soft red
+					// Light mode
+					primary: '#3498db',    // Blue
+					secondary: '#f39c12',  // Gold
+					accent: '#16a085',     // Duck green
 					
-					// Dark mode - only 2 colors  
-					'primary-dark': '#fdcb6e',   // Darker warm yellow
-					'accent-dark': '#d63031',    // Darker red
+					// Dark mode
+					'primary-dark': '#2980b9',   // Darker blue
+					'secondary-dark': '#e67e22', // Darker gold
+					'accent-dark': '#27ae60',    // Darker green
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -120,6 +122,20 @@ export default {
 						opacity: '1',
 						transform: 'scale(1) rotate(0deg)'
 					}
+				},
+				'sparkle': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.8) rotate(0deg)'
+					},
+					'50%': {
+						opacity: '1',
+						transform: 'scale(1.2) rotate(180deg)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'scale(0.8) rotate(360deg)'
+					}
 				}
 			},
 			animation: {
@@ -127,7 +143,8 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'glow': 'glow 2s ease-in-out infinite',
 				'slide-up': 'slide-up 0.8s ease-out',
-				'bounce-in': 'bounce-in 0.6s ease-out'
+				'bounce-in': 'bounce-in 0.6s ease-out',
+				'sparkle': 'sparkle 3s ease-in-out infinite'
 			}
 		}
 	},

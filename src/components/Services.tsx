@@ -31,14 +31,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-zen-primary/10 dark:bg-zen-primary-dark/10">
+    <section id="services" className="py-20 bg-zen-primary/10">
       <div className="container mx-auto px-4">
         <header className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Nos Soins Signature
           </h2>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            Chaque soin est pensé comme un rituel de bien-être, 
+            Chaque soin est pensé comme un rituel de bien-être à Lille, 
             dans le respect de votre rythme et de vos besoins.
           </p>
         </header>
@@ -53,7 +53,7 @@ const Services = () => {
               itemProp="itemListElement"
             >
               <header className="flex items-start mb-4">
-                <Heart className="h-6 w-6 text-zen-accent dark:text-zen-accent-dark mt-1 mr-3 flex-shrink-0" aria-hidden="true" />
+                <Heart className="h-6 w-6 text-zen-accent mt-1 mr-3 flex-shrink-0" aria-hidden="true" />
                 <h3 className="text-xl font-semibold text-card-foreground" itemProp="name">
                   {service.title}
                 </h3>
@@ -68,7 +68,7 @@ const Services = () => {
                   <Circle className="h-4 w-4 mr-2" aria-hidden="true" />
                   <span className="text-sm" itemProp="duration">{service.duration}</span>
                 </div>
-                <div className="text-zen-accent dark:text-zen-accent-dark font-semibold" itemProp="offers" itemScope itemType="https://schema.org/Offer">
+                <div className="text-zen-accent font-semibold" itemProp="offers" itemScope itemType="https://schema.org/Offer">
                   <span itemProp="price">{service.price}</span>
                 </div>
               </footer>

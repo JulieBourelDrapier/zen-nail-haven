@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Hero = () => {
@@ -14,21 +13,21 @@ const Hero = () => {
           </header>
           
           <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in opacity-0 animation-delay-700">
-            Découvrez un havre de paix où le temps s'arrête. Dans mon salon à domicile, 
+            Découvrez un havre de paix où le temps s'arrête à Lille. Dans mon salon à domicile, 
             chaque soin devient un moment de détente absolue, pensé spécialement pour vous.
           </p>
           
           <nav className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 animation-delay-900" role="navigation" aria-label="Actions principales">
             <a 
               href="#contact" 
-              className="bg-zen-accent dark:bg-zen-accent-dark text-white px-8 py-4 rounded-full hover:opacity-90 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 font-medium shadow-lg text-lg hover:shadow-xl group"
+              className="bg-zen-accent text-white px-8 py-4 rounded-full hover:opacity-90 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 font-medium shadow-lg text-lg hover:shadow-xl group"
               aria-label="Prendre rendez-vous pour un soin de manucure"
             >
               <span className="group-hover:animate-pulse">Prendre Rendez-vous</span>
             </a>
             <a 
               href="#services" 
-              className="border-2 border-zen-accent dark:border-zen-accent-dark text-zen-accent dark:text-zen-accent-dark px-8 py-4 rounded-full hover:bg-zen-accent dark:hover:bg-zen-accent-dark hover:text-white transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 font-medium text-lg hover:shadow-lg"
+              className="border-2 border-zen-accent text-zen-accent px-8 py-4 rounded-full hover:bg-zen-accent hover:text-white transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 font-medium text-lg hover:shadow-lg"
               aria-label="Découvrir tous nos soins de manucure"
             >
               Découvrir nos Soins
@@ -37,15 +36,15 @@ const Hero = () => {
         </div>
         
         {/* Enhanced floating elements with different animations */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-zen-primary/30 dark:bg-zen-primary-dark/30 rounded-full animate-float opacity-0 animation-delay-1000 hidden lg:block" aria-hidden="true"></div>
-        <div className="absolute top-40 right-20 w-16 h-16 bg-zen-accent/30 dark:bg-zen-accent-dark/30 rounded-full animate-float animation-delay-1500 opacity-0 hidden lg:block" aria-hidden="true"></div>
-        <div className="absolute bottom-20 left-20 w-12 h-12 bg-zen-accent/30 dark:bg-zen-accent-dark/30 rounded-full animate-float animation-delay-2000 opacity-0 hidden lg:block" aria-hidden="true"></div>
-        <div className="absolute top-1/3 right-10 w-8 h-8 bg-zen-primary/40 dark:bg-zen-primary-dark/40 rounded-full animate-float animation-delay-2500 opacity-0 hidden lg:block" aria-hidden="true"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-zen-primary/30 rounded-full animate-float opacity-0 animation-delay-1000 hidden lg:block" aria-hidden="true"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 bg-zen-accent/30 rounded-full animate-float animation-delay-1500 opacity-0 hidden lg:block" aria-hidden="true"></div>
+        <div className="absolute bottom-20 left-20 w-12 h-12 bg-zen-accent/30 rounded-full animate-float animation-delay-2000 opacity-0 hidden lg:block" aria-hidden="true"></div>
+        <div className="absolute top-1/3 right-10 w-8 h-8 bg-zen-secondary/40 rounded-full animate-float animation-delay-2500 opacity-0 hidden lg:block" aria-hidden="true"></div>
         
         {/* Animated background elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/3 w-32 h-32 bg-gradient-to-br from-zen-primary/10 dark:from-zen-primary-dark/10 to-zen-accent/10 dark:to-zen-accent-dark/10 rounded-full blur-xl animate-pulse animation-delay-1200 opacity-0"></div>
-          <div className="absolute bottom-1/4 right-1/3 w-24 h-24 bg-gradient-to-br from-zen-accent/10 dark:from-zen-accent-dark/10 to-zen-primary/10 dark:to-zen-primary-dark/10 rounded-full blur-xl animate-pulse animation-delay-1800 opacity-0"></div>
+          <div className="absolute top-1/4 left-1/3 w-32 h-32 bg-gradient-to-br from-zen-primary/10 to-zen-accent/10 rounded-full blur-xl animate-pulse animation-delay-1200 opacity-0"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-24 h-24 bg-gradient-to-br from-zen-accent/10 to-zen-secondary/10 rounded-full blur-xl animate-pulse animation-delay-1800 opacity-0"></div>
         </div>
       </div>
     </section>
