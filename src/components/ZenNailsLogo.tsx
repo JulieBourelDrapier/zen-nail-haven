@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Heart, Sparkles } from 'lucide-react';
+import { Heart, Hand } from 'lucide-react';
 
 interface ZenNailsLogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -19,18 +19,14 @@ const ZenNailsLogo = ({ size = 'md', className = '' }: ZenNailsLogoProps) => {
   return (
     <div className={`flex items-center space-x-3 ${className}`}>
       <div className={`${currentSize.container} relative flex items-center justify-center bg-zen-accent rounded-full shadow-lg`}>
-        {/* Background sparkle effect */}
+        {/* Background gradient */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-br from-zen-accent via-zen-primary to-zen-accent opacity-80"></div>
         
-        {/* Animated sparkles around the logo */}
-        <Sparkles className={`${currentSize.icon} text-white absolute animate-pulse`} />
+        {/* Central hand icon representing peace and care */}
+        <Hand className={`${currentSize.icon} text-white relative z-10`} />
         
-        {/* Central heart icon */}
-        <Heart className={`${currentSize.icon} text-white relative z-10 animate-glow`} fill="currentColor" />
-        
-        {/* Small floating particles */}
-        <div className="absolute -top-1 -right-1 w-2 h-2 bg-zen-secondary rounded-full animate-bounce"></div>
-        <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-zen-primary rounded-full animate-pulse"></div>
+        {/* Small heart accent */}
+        <Heart className="absolute -top-1 -right-1 w-3 h-3 text-zen-primary" fill="currentColor" />
       </div>
       
       <div className="flex flex-col">
