@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Heart, Calendar, MessageCircle } from 'lucide-react';
+import { Heart, Calendar, MessageCircle, Phone } from 'lucide-react';
 import { toast } from 'sonner';
 
 const ContactForm = () => {
@@ -92,7 +92,19 @@ const ContactForm = () => {
               </CardHeader>
               <CardContent className="text-center text-zen-forest/80">
                 <p>Salon à domicile</p>
-                <p>Paris 15ème</p>
+                <p>Lille</p>
+                <div className="mt-3 pt-3 border-t border-zen-sand/30">
+                  <div className="flex items-center justify-center space-x-2 text-sm">
+                    <Phone className="h-4 w-4 text-zen-sage" aria-hidden="true" />
+                    <a 
+                      href="tel:+33320456789" 
+                      className="text-zen-forest/80 hover:text-zen-sage transition-colors duration-300"
+                      aria-label="Call us at +33 3 20 45 67 89"
+                    >
+                      03 20 45 67 89
+                    </a>
+                  </div>
+                </div>
                 <p className="mt-2 text-sm">Adresse exacte communiquée lors de la prise de rendez-vous</p>
               </CardContent>
             </Card>
